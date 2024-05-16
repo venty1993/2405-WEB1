@@ -1,0 +1,19 @@
+절대경로 :
+C:\Users\admin\Documents\GitHub\2405-WEB1\day04
+와 같이 드라이브로부터 현재 파일이 어디에 위치하는지에 대한 주소
+/day04/상대경로 ->
+(C:\Users\admin\Documents\GitHub\2405-WEB1) / day04 / 상대경로.txt
+
+
+상대경로 : 
+
+나를 기준으로 내가 사용하고자 하는 파일이 어디있는지가 중요
+
+현재 파일(상대경로.txt)에서 /day04/sign.html을 사용하고싶을때
+ : url:(sign.html)
+
+현재 파일(상대경로.txt)에서 /day04/list/ul-tag.html을 사용하고싶을때
+ : url:(list/ul-tag.html)
+
+현재 파일(상대경로.txt)에서 /img/images.jpg을 사용하고싶을때
+ : url:(../img/images.jpg)
