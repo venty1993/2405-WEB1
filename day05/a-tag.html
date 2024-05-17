@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 5000px;
+            position: absolute;
+        }
+
+        #target-tag {
+            position: absolute;
+            bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- _self : 기본값. 현재 탭이 목적경로로 이동 -->
+    <a href="https://naver.com" target="_self">네이버로 이동</a>
+    <a href="https://naver.com" target="_blank">네이버로 이동(새탭)</a>
+    <!-- iframe과 함께 사용하는 속성들 -->
+    <a href="https://naver.com" target="_parent">부모?</a>
+    <a href="https://naver.com" target="_top">탑?</a>
+    <!-- 최근 iframe은 특수한 목적 외에는 사용하지 않기때문에
+        이 지식이 얼마나 유용할지는..  -->
+
+    <a href="../day04/img-tag.html">이미지로 이동</a>
+    <a href="tel:010-1234-1234">010-1234-1234</a>
+    <a href="sms:010-1234-1234">관리자에게 문자 보내기</a>
+    <a href="mailto:admin@sbsart.com">메일보내기</a>
+    
+    <a href="#">임시링크</a>
+    <a href="#target-tag">타겟으로 이동</a>
+
+
+    <p id="target-tag">타겟입니다.</p>
+
+    
+</body>
+</html>
