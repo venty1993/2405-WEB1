@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 초기화는 반드시 css 맨 위에 작성되어야합니다. -->
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        /* #hello {
+            color: blue;
+        }
+        .hi {
+            color: red;
+        }
+        p {
+            color: pink;
+        } */
+
+        .자식 {
+            color: yellow!important;
+        }
+
+        .부모 > .자식 {
+            color: red;
+        }
+
+        .자식{
+            color: blue;
+        }
+        
+        .부모 {
+            color: pink;
+        }
+
+
+
+        .부모 {
+            color: aquamarine;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <!-- css 우선순위 -->
+    <!-- 
+        규칙
+        - 나중에 선언된것이 높은 우선순위를 가진다.
+        - 작성 순서와 상관없이 tag < class < id의 우선순위를 가진다
+        - 부모로부터 상속받은 속성은 우선순위가 가장 낮다
+        - 우선순위가 같은경우 부모-자식 관계가 많은 순서로 우선순위를 가진다.
+        
+        - !important 문법은 가장 높은 우선순위를 가지나, 사용하지 않는것이 좋다.
+     -->
+
+     <!-- 
+        우선순위
+            1. !important
+            2. HTML내의 인라인 스타일 
+            3. #id로 지정한 속성
+            4. .class로 지정한 속성
+            5. tag로 지정한 속성
+            6. 상속받은 속성
+
+            우선순위가 같을경우,
+            1. 부모-자식관계가 많은 순서
+            2. 아래쪽에 작성된 순서
+
+      -->
+
+    <p class="hi" id="hello" style="color: cadetblue;">안녕하세요</p>
+
+    <p class="부모">안녕하세요 저는 <span class="자식">홍길동</span>입니다</p>
+
+    <span class="자식">성냥팔이소녀</span>
+
+    
+</body>
+</html>
