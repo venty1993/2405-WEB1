@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- reset.css 초기화 활용방법 -->
+    <link rel="stylesheet" href="../reset.css">
+    
+    <style>
+        /* 간이 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 태그선택자 */
+        p {
+            color: pink;
+        }
+
+        /* html 내에 작성하지 않은 클래스도 작성 가능합니다. */
+        .clicked {
+            background-color: pink;
+        }
+        .hello {
+            font-size: 20px;
+        }
+        #me {
+            font-weight: bold;
+            font-size: 24px;
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        선택자의 종류
+            1. 태그 선택자 (태그이름)
+                태그선택자는 초기화의 성질이 강하다.
+                개별 속성을 설정하기 위한 선택자로는 적합하지 않다.
+            2. 클래스 선택자 (.클래스)
+                반복될것을 전제로한 선택자
+                가장 많이 사용되는 선택자
+            3. 아이디 선택자 (#아이디)
+                단 하나뿐인 컨텐츠에 속성을 주기 위한 선택자
+     -->
+     <p>1번타자</p>
+     <p>2번p</p>
+
+     <button>누르면색바뀌는버튼</button>
+
+     <span class="hello">
+        안녕하세요
+     </span>
+     
+     <span id="me">
+        저입니다.
+     </span>
+</body>
+</html>
