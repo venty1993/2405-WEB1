@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            padding: 0 32px;
+        }
+
+        tag {
+            display: block;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            height: 200px;
+            background-color: gray;
+            margin-bottom: 16px;
+        }
+
+        .contents-container {
+            display: flex;
+            gap: 16px;
+        }
+
+
+        .contents-left {
+            width: 60%;
+            height: 500px;
+            background-color: gray;
+        }
+        .contents-right {
+            width: 40%;
+            height: 500px;
+            background-color: gray;
+        }
+        
+        @media screen and (max-width : 1400px) {
+            .contents-container{
+                flex-direction: column;
+            }
+            .contents-left {
+                width: 100%;
+            }
+            .contents-right {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 웹 디자인에서 정렬을 잘 하는것은 굉장히 중요하다. -->
+    <!-- 
+        스마트폰이 보급된 이후 반응형 웹의 중요도가 높아지면서
+        웹의 구조를 흐름에 맞게 잘 만들어야
+        추후 반응형 디자인에서 정상적인 작업이 가능하다
+    -->
+
+    <!-- 한 부모 내에서 흐름은 한 방향으로만 만들 수 있다. -->
+    <!-- 
+        자식요소들의 정렬 방향이 변화한다면 같은 방향의 요소들을 묶어
+        새로운 구조를 만들어준다. 
+    -->
+
+    <!-- tag태그란것은 존재하지 않습니다. -->
+    <!-- 실제로는 해당 요소에 맞는 태그를 적재적소에 사용 해줘야 한다. -->
+    <tag class="container">
+        <tag class="header"></tag>
+        <tag class="contents-container">
+            <tag class="contents-left"></tag>
+            <tag class="contents-right"></tag>
+        </tag>
+    </tag>
+</body>
+</html>
