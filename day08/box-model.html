@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            background-color: pink;
+            /* width: 36px;
+            height: 36px; */
+            width: 100px;
+            height: 100px;
+            padding: 32px;
+            
+
+            box-sizing: border-box;
+            /* content-box : 크기 기준을 컨텐츠(파랑영역) 기준에서 패딩과 보더를 바깥쪽으로 붙인다(개체가 밖으로 커진다)  */
+            /* border-box : 크기 기준을 보더 바깥쪽으로 잡고, 패딩과 보더를 안쪽으로 붙인다(개체 크기 고정) */
+        }
+
+        .윗놈 {
+            margin-bottom: 100px;
+            background-color: cadetblue;
+        }
+
+        .아랫놈 {
+            margin-top: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <button>버튼</button>
+    <button>버튼</button>
+    <button>버튼</button>
+
+    <div class="box 윗놈">
+        컨텐츠
+    </div>
+    <div class="box 아랫놈">
+        컨텐츠
+    </div>
+    <div class="box">
+        컨텐츠
+    </div>
+    <div class="box">
+        컨텐츠
+    </div>
+</body>
+</html>
