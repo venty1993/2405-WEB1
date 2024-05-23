@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .em-box {
+                background-color: pink;
+                font-size: 24px;
+                /* width: 2em; */
+                /* height: 2em; */
+            }
+
+            .p1 {
+                font-size: 1.25em;
+            }
+
+            .p2 {
+                font-size: 2em;
+            }
+
+            .video {
+                /* font-size: 5px;
+
+                width: 80em;
+                height: 45em; */
+
+                height: 100%;
+                /* aspect-ratio: 16/9; */
+                background-color: lightpink;
+            }
+
+            .cover {
+                height: 50vh;
+                width: 16vw;
+
+                background-color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="em-box">
+            em단위가 적용된 박스입니다
+        </div>
+
+        <p class="p1">
+            안녕하세요
+            <span class="p2">반갑습니다</span>
+        </p>
+
+        <div class="video">ㅁㄴㅇ</div>
+
+        <div class="cover"></div>
+
+        <!-- css에서 사용하는 단위 -->
+        <!-- 
+            px  : 지정한 px로 고정
+            %   : 지정한 비율로 고정
+
+            폰트 기반 단위
+                rem : html의 폰트사이즈를 참조하는 단위
+                em  : 개체의 폰트사이즈에 따라 변화하는 값.
+                    폰트사이즈는 상속되기때문에 em단위를 계속 상속하다보면 나중에 크기가 어떻게 될지 예측하기 어렵다.
+
+            화면 기반 단위
+                vh  : 브라우저의 높이를 기준으로 값이 정해지는 단위
+                vw  : 브라우저의 너비를 기준으로 값이 정해지는 단위
+
+                예) 브라우저 : 1900x900px일때
+                    100vw = 1900px, 1vw = 19px
+                    100vh = 900px, 1vh = 9px
+
+        -->
+    </body>
+</html>
