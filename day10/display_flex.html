@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+
+        .container {
+            border:  1px solid #222;
+            width: 800px;
+            height: 800px;
+
+            /* 자식요소들을 정렬할수있게 만들어준다. */
+            display: flex;
+            /* 가로세로 정렬 */
+            justify-content: center;
+            align-items: flex-end;
+                /* flex-start, center, flex-end */
+                /* justify-content: space-between; */
+
+            gap: 24px;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 1px solid #222;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+    </div>
+
+    <div>test</div>
+</body>
+</html>
