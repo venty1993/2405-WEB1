@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            /* justify-content: space-between; */
+        }
+
+        .temp-img {
+            background-color: pink;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+
+            /* 플렉스 자식 요소(본인)의 기본 크기 */
+            /* flex-basis: 100px; */
+            flex-shrink: 0;
+            /* flex-grow: 1; */
+        }
+
+        .comment {
+            /* flex-grow: 2; */
+            width: 100%;
+        }
+
+        button {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="temp-img"></div>
+        <p class="comment">안녕하세요</p>
+        <button>삭제</button>
+    </div>
+    <div class="container">
+        <div class="temp-img"></div>
+        <p class="comment">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet reiciendis eos, incidunt, perferendis iusto fugiat dolores at qui odio dolorum iste? Excepturi sed quae, a ea neque nesciunt sit exercitationem.</p>
+        <button>삭제</button>
+    </div>
+    <div class="container">
+        <div class="temp-img"></div>
+        <p class="comment">안녕하세요</p>
+        <button>삭제</button>
+    </div>
+    <div class="container">
+        <div class="temp-img"></div>
+        <p class="comment">안녕하세요</p>
+        <button>삭제</button>
+    </div>
+    <div class="container">
+        <div class="temp-img"></div>
+        <p class="comment">안녕하세요</p>
+        <button>삭제</button>
+    </div>
+</body>
+</html>

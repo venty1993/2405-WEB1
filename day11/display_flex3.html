@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .container {
+            /* width: 420px; */
+            height: 800px;
+            border: 1px solid #222;
+            display: flex;
+
+            justify-content: space-between;
+            gap: 16px;
+            /* = 
+                row-gap: 16px;
+                column-gap: 16px; 
+            */
+            
+            /* 컨텐츠가 부모 밖으로 넘쳤을때 줄바꿈을 통해 여러줄로 표시 할 수 있는 속성 */
+            flex-wrap: wrap;
+            /* 컨텐츠가 여러줄이 되었을때 수직방향 정렬을 다룰 수 있다. */
+            align-content: flex-start;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+    </div>
+    <!-- div.container>div.box{BOX}*5 -->
+</body>
+</html>
