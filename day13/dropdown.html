@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label {
+            display: block;
+            cursor: pointer;
+        }
+
+        p {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked + p {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 사용상 주의사항 -->
+    <!-- 화상을 입을 수 있으니 주의하세요 -->
+
+    <label for="my-check">사용상 주의사항</label>
+    <input type="checkbox" name="" id="my-check">
+    <p>화상을 입을 수 있으니 주의하세요</p>
+
+    <label for="my-copy">저작권</label>
+    <input type="checkbox" name="" id="my-copy">
+    <p>그런건 없어요</p>
+</body>
+</html>

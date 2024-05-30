@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .container .hi .bye {
+            color: red;
+        }
+
+        .hi > .bye{
+            color: pink;
+        }
+
+        .img-class#img-id{
+            border: 5px solid pink;
+        }
+
+        .img-class {
+            border: 5px solid blue;
+        }
+
+        #img-id {
+            border: 5px solid red;
+        }
+
+        .test-button[type] {
+            background-color: pink;
+            width: 50px;
+            height: 50px;
+        }
+
+        [type='button'] {
+            color: red;
+        }
+
+        [type~="button"] {
+            font-size: 20px;
+        }
+
+        [type|='button'] {
+            font-weight: bold;
+        }
+
+        [type^='button'] {
+            border: 1px solid red;
+        }
+
+        [type$='button'] {
+            opacity: 0.5;
+        }
+
+        [type*='s'] { 
+            padding: 16px;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- img#img-id.img-class -->
+    <img id="img-id" class="img-class" src="../img/images.jpg" alt="대체텍스트">
+    <img src="../img/images.jpg" class="img-class" alt="">
+    <img src="../img/images.jpg" alt="" id="img-id">
+    <!-- 
+        * : 전체 선택자. 초기화 용도로 사용한다(margin 0, padding 0)
+        img : 태그선택자. 특정 태그를 초기화 하는데에 사용(img{ display : block; }등)
+        #img-id : 아이디 선택자. 유니크한 값으로 높은 우선순위를 가진다.
+        .img-class : 클래스 선택자. 일반적으로 가장 많이 사용하는 형태
+
+        [ #img-id.img-class ]
+     -->
+
+     <div class="container">
+        <div class="hi hello">
+            <div class="bye">test</div>
+        </div>
+        <div class="hi"></div>
+     </div>
+     <!-- 
+        후손선택자 :        [ .container .bye ](O)     [.hi .bye](O)
+        자손(자식)선택자 :  [ .container > .bye ](X)    [.hi > .bye](O)
+
+        후손, 자손 선택자는 css를 구조적으로 만들어 줄 수 있는 반면,
+        남용하게되면 유지보수가 힘들어질수 있으니 너무 많은단계를 쓰는것은 지양
+
+        *[.hi.hello]
+      -->
+
+      <input class="test-button" type="button" value="버튼">
+      <div 내맘대로="속성" type="test button">디브..</div>
+      <div type="button-divs">디브222</div>
+      <div type="button-ㅁㅇㄹㅇㄻ퓸ㅇㅍ">디브3333</div>
+      <a href="../day12/chess.html">
+        <img src="../img/images.jpg" alt="">
+      </a>
+      <!-- 
+        [type] : 속성을 가지고 있는 개체를 대상으로 함
+        [type='button'] : 속성이 문자열과 같을때
+        [type~='button'] : 띄어쓰기 구분해 해당 문자열이 포함되어있을때
+        [type|='button'] : 속성이 문자열과 같거나, 문자열 뒤에 -(하이픈)이 붙어있을때
+        [type^='button'] : 해당 문자열로 시작할때
+        [type$='button'] : 해당 문자열로 끝날때
+        [type*='button'] : 해당 문자열이 포함될때
+       -->
+
+    <style>
+        .첫째 + .둘째 {
+            color: pink;
+        }
+
+        .첫째 ~ .셋째 {
+            background-color: pink;
+        }
+    </style>
+    <div class="container">
+        <div class="첫째">111111</div>
+        <div class="둘째">222222</div>
+        <div class="셋째">333333</div>
+        <div class="넷째">444444</div>
+    </div>
+
+    <!--
+        .첫째 + .둘째 : .첫째 뒤에 .둘째 가 딱 붙어있을때만 작동
+        .첫째 ~ .셋째 : .첫째 뒤에 .셋째가 있을때
+    -->
+
+</body>
+</html>
