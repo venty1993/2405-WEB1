@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        접두
+        : first, last, nth, nth-last
+
+        nth : n번째(ex. 10th 같은)
+        nth-last : 뒤에서부터 n번째
+
+        접미
+        : child, of-type
+        child : 자식(내가 몇번째 자식인지가 중요)
+        of-type : 유형(내가 몇번째로 등장하는지가 중요)
+     -->
+     <style>
+        div:nth-child(3){
+            
+        }
+        
+        div:nth-of-type(3){
+            color: red;
+
+        }
+     </style>
+
+     <section class="container">
+        <div class="첫째">1</div>
+        <div class="둘째">2</div>
+        <p class="셋째">3</p>
+        <div class="넷째">4</div>
+     </section>
+
+     <!-- 
+        반응 선택자
+        선택자:active  -> 클릭중일때
+        선택자:hover   -> 마우스를 올렸을때
+      -->
+
+      <style>
+        .reaction-box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .reaction-box:hover {
+            background-color: coral;
+        }
+        .reaction-box:active {
+            background-color: red;
+        }
+      </style>
+
+      <div class="reaction-box">
+        반응 선택자
+      </div>
+
+      <style>
+        .reaction-container:hover > h3 {
+            color: pink;
+        }
+        .reaction-container:hover > p {
+            color: blue;
+        }
+      </style>
+
+      <div class="reaction-container">
+        <h3 class="reaction-title">반응하는 제목</h3>
+        <p class="reaction-p">반응하는 본문영역</p>
+      </div>
+
+      <!-- 
+        상태선택자 : input의 부수속성
+        :checked   - 체크박스등이 체크되어있을때
+        :focus     - 포커스를 가지고있을때
+        :enabled   - 활성화된 컨텐츠일때 
+        :disabled  - 비활성화된 컨텐츠일때
+
+      -->
+
+      <style>
+        input:enabled {
+            background-color: blue;
+            color: white;
+        }
+
+        input:disabled {
+            background-color: black;
+        }
+
+        input:focus {
+            background-color: orange;
+        }
+      </style>
+
+      <h3>enabled</h3>
+      <p><input type="text" name="" id=""></p>
+
+      <h3>disabled</h3>
+      <p>입력할수없는상태 <input type="text" disabled></p>
+
+
+      <!-- 링크선택자 -->
+      <style>
+        /* 아직 방문하지 않은 링크 */
+        a:link {
+            color: pink;
+        }
+        /* 방문한적이 있는 링크 */
+        a:visited{
+            color: cadetblue;
+        }
+      </style>
+
+      <a href="https://naver.com">네이버</a>
+      <a href="https://op.gg">롤 전적검색</a>
+
+      <!-- 
+        문자선택자
+        ::first-letter  - 첫번째 글씨에 적용
+        ::first-line    - 첫번째 줄에 적용
+        ::after         - 본래용도는 앞, 뒤에 글씨를 넣기 위한 선택자이지만
+        ::before          디자인만을 위한 태그를 만드는 대신 사용하기 좋은 방법
+        ::selection     - 드래그한 영역에 적용
+       -->
+       <style>
+        body > .char-container {
+            color: #222;
+        }
+        .char-container::first-letter {
+            font-size: 20px;
+            background-color: pink;
+            color: blue;
+        }
+        .char-container::first-line {
+            font-size: 20px;
+            background-color: cadetblue;
+            color: white;
+        }
+
+        .after-container {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+
+            
+        }
+
+        .after-container::after {
+            content : '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: cadetblue;
+            
+        }
+
+        .after-container::after {
+            background-color: pink;
+        }
+
+        .char-container::selection {
+            background-color: cadetblue;
+            color: white;
+        }
+       </style>
+
+       <div class="char-container">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem molestiae in quasi atque esse aperiam voluptate possimus et voluptates aliquid necessitatibus debitis consequatur eius iusto, id, similique sapiente! Cupiditate, deleniti!
+       </div>
+
+       <div class="after-container">
+        안녕하세요asdasd
+       </div>
+
+       <!-- 
+        부정선택자
+        선택자:not(선택자)
+        -->
+
+        <style>
+            .my-container{
+                width: 620px;
+                height: 200px;
+                border: 1px solid #222;
+            }
+
+            .my-content {
+                width: 200px;
+                height: 200px;
+                background-color: lightpink;
+                float: left;
+                /* margin-right: 10px; */
+            }
+
+            .my-content:not(:last-child) {
+                margin-right:10px;
+            }
+
+            /* .my-content:last-child {
+                margin-right: 0;
+            } */
+        </style>
+        <div class="my-container">
+            <div class="my-content"></div>
+            <div class="my-content"></div>
+            <div class="my-content"></div>
+        </div>
+</body>
+</html>
