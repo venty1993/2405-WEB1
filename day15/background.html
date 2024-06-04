@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .background-box {
+            width: 250px;
+            height: 50vh;
+            /* 이미지 경로는 url()에 작성. */
+            background-image: url(../img/images.jpg);
+            /* 
+                background-size : 배경의 크기를 다룰 수 있게 해주는 속성
+                100% : 컨텐츠의 width를 기준으로 가득 채운다
+                100% 100% : width, height를 기준으로 가득 채운다 (높은 확률로 이미지 찌그러짐)
+                cover : 배경을 유동적으로 늘려 비율은 유지한상태로 컨텐츠의 빈공간을 안보이게 덮어준다.
+                contain : 배경을 유동적으로 늘리거나 줄여 비율을 유지한상태로 배경이미지를 전부 보이게 한다.
+            */
+            background-size:cover;
+
+            /* 
+                bacground-image속성은 포토샵의 레이어처럼 여러 이미지를 중첩할 수 있다.
+            */
+            background-image: url(../img/cat_bg.png), linear-gradient(326deg, #861657 0%, #ffa69e 74%);
+
+
+
+            background-repeat:no-repeat;
+            background-position: center;
+
+            border: 1px solid #222;
+
+
+        
+        }
+
+        .notice {
+            background: url('../img/스프라이트.png') no-repeat -4px -781px;
+            width: 95px;
+            height: 68px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background-box"></div>
+    <div class="notice"></div>
+   
+</body>
+</html>
