@@ -33,7 +33,7 @@
     </style>
 </head>
 <body>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit ut exercitationem, atque laborum distinctio perspiciatis voluptate hic est facere, necessitatibus soluta commodi eum totam iste eos in esse. Facere, voluptate?</p>
+    <p style="color: #ff000080);">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit ut exercitationem, atque laborum distinctio perspiciatis voluptate hic est facere, necessitatibus soluta commodi eum totam iste eos in esse. Facere, voluptate?</p>
     <button>테스트용 버튼</button>
 
     <!-- 필기는 선택. 실제로는 거의 없는 상황 -->
@@ -56,5 +56,29 @@
     <section id="intro">
 
     </section>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            border: 2px solid #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .alpha-box {
+            background-color: rgba(95, 158, 160, 0.49);
+        }
+
+        .opacity-box{
+            opacity: 0.5;
+        }
+    </style>
+    <div class="box alpha-box">알파</div>
+    <div class="box opacity-box">오파</div>
 </body>
 </html>
